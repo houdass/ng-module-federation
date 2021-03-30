@@ -44,14 +44,45 @@
 ```
 
 ### MicroFrontend
-```
-<div class="card text-white bg-danger m-5">
- <div class="card-header">Product (μFrontend)</div>
- <div class="card-body">
-   <h5 class="card-title">Some feature here</h5>
-   <p class="card-text">
-   
-   </p>
- </div>
+```<div class="card text-white bg-danger m-5">
+    <div class="card-header">Product (μFrontend)</div>
+    <div class="card-body">
+      <h5 class="card-title">Some feature here</h5>
+      <p class="card-text">
+      
+      </p>
+    </div>
 </div>
+```
+
+### Create & setup the Shell
+```
+ng g app shell
+ng add @angular-architects/module-federation --project shell --port 3003
+```
+
+### Create & setup product microFrontend
+```
+ng g app product
+ng add @angular-architects/module-federation --project product --port 4004
+```
+
+### Create & setup customer microFrontend
+```
+ng g app customer
+ng add @angular-architects/module-federation --project customer --port 5005
+```
+
+### Create & setup order microFrontend
+```
+ng g app order
+ng add @angular-architects/module-federation --project order --port 6006
+ng g m order --project order 
+ng g c order --project order --skip-tests 
+```
+
+### Create & setup tracking microFrontend
+```
+ng g app tracking
+ng add @angular-architects/module-federation --project tracking --port 7007
 ```

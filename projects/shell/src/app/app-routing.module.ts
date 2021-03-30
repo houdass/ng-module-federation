@@ -22,6 +22,33 @@ const routes: Routes = [
         exposedModule: './Module',
       }).then((m) => m.ProductModule),
   },
+  {
+    path: 'customer',
+    loadChildren: () =>
+      loadRemoteModule({
+        remoteEntry: 'http://localhost:5005/customerEntry.js',
+        remoteName: 'customer',
+        exposedModule: './Module',
+      }).then((m) => m.CustomerModule),
+  },
+  {
+    path: 'order',
+    loadChildren: () =>
+      loadRemoteModule({
+        remoteEntry: 'http://localhost:6006/orderEntry.js',
+        remoteName: 'order',
+        exposedModule: './Module',
+      }).then((m) => m.OrderModule),
+  },
+  {
+    path: 'tracking',
+    loadChildren: () =>
+      loadRemoteModule({
+        remoteEntry: 'http://localhost:7007/trackingEntry.js',
+        remoteName: 'tracking',
+        exposedModule: './Module',
+      }).then((m) => m.TrackingModule),
+  },
 ];
 
 @NgModule({
