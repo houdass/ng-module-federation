@@ -1,11 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { CounterService } from 'shared-lib';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
 })
-export class HomeComponent implements OnInit {
-  constructor() {}
+export class HomeComponent {
+  constructor(public counterService: CounterService) {}
 
-  ngOnInit(): void {}
+  increment(): void {
+    this.counterService.increment();
+  }
 }

@@ -86,3 +86,10 @@ ng g c order --project order --skip-tests
 ng g app tracking
 ng add @angular-architects/module-federation --project tracking --port 7007
 ```
+
+
+### Shared lib
+```
+<button class="btn btn-light" (click)="increment()">Increment</button>
+{{ counterService.currentValue }}
+```

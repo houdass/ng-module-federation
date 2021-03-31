@@ -1,11 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { CounterService } from 'shared-lib';
 
 @Component({
   selector: 'app-order',
   templateUrl: './order.component.html',
 })
-export class OrderComponent implements OnInit {
-  constructor() {}
+export class OrderComponent {
+  constructor(public counterService: CounterService) {}
 
-  ngOnInit(): void {}
+  increment(): void {
+    this.counterService.increment();
+  }
 }
