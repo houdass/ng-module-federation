@@ -23,7 +23,6 @@ module.exports = {
       exposes: {
         './Module': './projects/order/src/app/order/order.module.ts',
       },
-
       shared: {
         '@angular/core': { singleton: true, strictVersion: true },
         '@angular/common': { singleton: true, strictVersion: true },

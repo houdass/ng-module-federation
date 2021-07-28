@@ -23,7 +23,6 @@ module.exports = {
       exposes: {
         './Module': './projects/tracking/src/app/tracking/tracking.module.ts',
       },
-
       shared: {
         '@angular/core': { singleton: true, strictVersion: true },
         '@angular/common': { singleton: true, strictVersion: true },
